@@ -27,8 +27,8 @@ const App = () => {
           <ListItem key={space.id} className={space.available ? 'Available' : 'Occupied'}>
             <ListItemText  primary={`Space ${space.id}`} secondary={space.available ? 'Available' : 'Occupied'} />
             <div>
-              {/* <Timer value={space.currentTime} handleCallback={Callback}  ></Timer> */}
            {space.currentTime}
+              {/* <Timer value={space.currentTime} handleCallback={Callback}  ></Timer> */}
             </div>
             <IconButton
               edge="end"
@@ -36,7 +36,7 @@ const App = () => {
               onClick={() => toggleAvailability(space.id,space.currentTime,space.available)}
             >
               {space.available ? <EventAvailable /> : <EventBusy />}
-              </IconButton>
+              </IconButton> 
             
           </ListItem>
         ))}
